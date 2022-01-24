@@ -1,0 +1,2 @@
+# MEANShops
+MEAN stack application
