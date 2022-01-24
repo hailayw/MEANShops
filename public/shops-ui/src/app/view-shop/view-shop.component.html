@@ -1,0 +1,17 @@
+<h1>Details of {{shop.name}}</h1>
+<table class="table table-active">
+  <thead>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Founded</th>
+    <th>Items</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{shop.name}}</td>
+      <td>{{shop.category}}</td>
+      <td>{{shop.established}}</td>
+      <td><a [routerLink]="['items']">List items</a>
+    </tr>
+  </tbody>
+</table>

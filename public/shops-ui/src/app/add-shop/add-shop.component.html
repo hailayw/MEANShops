@@ -1,0 +1,23 @@
+<form #shopForm = 'ngForm' *ngIf="!submitted" (ngSubmit)="onAdd()" novalidate>
+  <h2>Add New Shop:</h2>
+    <div class="form-group">
+    <label for="name">Name:</label>
+    <input [(ngModel)] = "shop.name" name = 'name' type="text" class = "form-control"
+              required #name = "ngModel" [class.is-invalid] = "name.invalid && name.touched"
+              placeholder="Enter shop name">
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <input [(ngModel)] = "shop.category" name = 'category' class = "form-control"
+                        required #category = 'ngModel' [class.is-invalid] = 'category.invalid && category.touched'
+                        placeholder="Enter shop category">
+  </div>
+  <div class="form-group">
+    <label for="established">Founded on:</label>
+    <input [(ngModel)] = "shop.established" name = 'established' class = "form-control"
+                        required #established = 'ngModel' [class.is-invalid] = 'established.invalid && established.touched'
+                        placeholder="Enter established year">
+  </div>
+  <button class="btn btn-primary">Add</button>
+</form>

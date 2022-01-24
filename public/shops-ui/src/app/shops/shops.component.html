@@ -1,0 +1,26 @@
+<h1>Shops Dashboard</h1>
+<nav class="navbar">
+  <input type="text" class="form-control" name="shopName" [(ngModel)] = "shopName" (ngModelChange) = "search()"
+  placeholder="Enter name of a shop to search">
+</nav>
+<table class="table table-active">
+  <thead>
+    <!-- (click)="sort('Name')">Name&nbsp;<i class="fa fa-sort"></i> -->
+    <th>Name</th>
+    <th>Category</th>
+    <th>Founded</th>
+    <th>Authorities</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let shop of shops | paginate : {itemsPerPage: 3, currentPage: page};">
+      <td>{{shop.name}}</td>
+      <td>{{shop.category}}</td>
+      <td>{{shop.established}}</td>
+      <!-- <td><a [routerLink]="['delete', shop._id]">Delete</a> | -->
+      <td><a [routerLink]="['delete', shop._id]">Delete</a> |
+      <a [routerLink]="['edit', shop._id]">Edit</a> |
+      <a [routerLink]="['view', shop._id]">View</a></td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange) = "page = $event"></pagination-controls>

@@ -1,0 +1,30 @@
+{
+  "name": "shops-server",
+  "version": "1.0.0",
+  "description": "This is my personal hobby project with mongodb-express-node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --inspect"
+  },
+  "keywords": [
+    "Express",
+    "npm",
+    "mongodb",
+    "node"
+  ],
+  "author": "Hailay Gidey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.6",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
