@@ -1,5 +1,5 @@
-import { ActivatedRoute } from '@angular/router';
-import { ShopService } from './../service/shop.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ShopService } from '../service/shop.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class DeleteComponent implements OnInit {
   private shopId!: string;
 
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute) { }
+  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data =>{
@@ -22,5 +23,6 @@ export class DeleteComponent implements OnInit {
                 .catch(error => {
                   return{"message":"Error deleting shop", error};
                 });
+    this.router.navigate(['shops']);
   }
 }

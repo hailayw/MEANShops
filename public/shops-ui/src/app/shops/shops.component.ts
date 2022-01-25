@@ -40,7 +40,7 @@ export class ShopsComponent implements OnInit {
     }
   }
 
-  delete() {
+  deleteShop(shopId: String) {
     if(!this.shopId) {
       this.ngOnInit();
     }

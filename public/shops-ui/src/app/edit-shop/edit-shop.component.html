@@ -1,4 +1,5 @@
-<form #shopForm = 'ngForm' *ngIf="!submitted" (ngSubmit)="onEdit()" novalidate>
+<!-- (ngSubmit)="onEdit()" -->
+<form #shopForm = 'ngForm' *ngIf="!submitted" novalidate>
   <h2>Edit Shop</h2>
   <div class="form-group">
     <label for="shopName">Name:</label>
@@ -16,5 +17,5 @@
     <input [(ngModel)] = "shop.established" name = 'established' class = "form-control"
                         required #established = 'ngModel' [class.is-invalid] = 'established.invalid && established.touched'>
   </div>
-  <button class="btn btn-primary">Save</button>
+  <button class="btn btn-primary" (click)="editShop()">Save</button>
 </form>

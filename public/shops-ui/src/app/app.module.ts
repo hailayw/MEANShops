@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DeleteComponent } from './delete/delete.component';
 import { ShopItemsComponent } from './shop-items/shop-items.component';
 import { flush } from '@angular/core/testing';
+import { VowelRemoverPipe } from './vowel-remover.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { flush } from '@angular/core/testing';
     ShopsComponent,
     FooterComponent,
     DeleteComponent,
-    ShopItemsComponent
+    ShopItemsComponent,
+    VowelRemoverPipe
   ],
   imports: [
     BrowserModule,
