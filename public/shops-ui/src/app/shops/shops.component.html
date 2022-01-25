@@ -16,8 +16,10 @@
       <td>{{shop.name}}</td>
       <td>{{shop.category}}</td>
       <td>{{shop.established}}</td>
+      shop.name
+      shop._id
+      <td><button (click)="deleteShop(shop._id)">Delete</button>
       <!-- <td><a [routerLink]="['delete', shop._id]">Delete</a> | -->
-      <td><a [routerLink]="['delete', shop._id]">Delete</a> |
       <a [routerLink]="['edit', shop._id]">Edit</a> |
       <a [routerLink]="['view', shop._id]">View</a></td>
     </tr>
