@@ -7,7 +7,6 @@ public/shops-ui/tmp
 public/shops-ui/out-tsc
 public/shops-ui/bazel-out
 public/shops-ui/.angular/
-public/shops-ui/.vscode/*
 
 # Node
 node_modules/
@@ -24,22 +23,22 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+public/shops-ui/.vscode/*
+public/shops-ui/!.vscode/settings.json
+public/shops-ui/!.vscode/tasks.json
+public/shops-ui/!.vscode/launch.json
+public/shops-ui/!.vscode/extensions.json
+public/shops-ui/.history/*
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+public/shops-ui/.angular/cache
+public/shops-ui/.sass-cache/
+public/shops-ui/connect.lock
+public/shops-ui/coverage
+public/shops-ui/libpeerconnection.log
+public/shops-ui/testem.log
+public/shops-ui/typings
 
 # System files
-.DS_Store
-Thumbs.db
+public/shops-ui/.DS_Store
+public/shops-ui/Thumbs.db
