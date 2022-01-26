@@ -13,6 +13,7 @@ export class ShopsComponent implements OnInit {
   shopName!: string;
   private shopId!: string;
   count = 1;
+  key!: string;
   shops: Shop[] = [];
   page : number = 1;
   constructor(private shopService : ShopService, private activatedRoute: ActivatedRoute ) { }
@@ -36,8 +37,13 @@ export class ShopsComponent implements OnInit {
     if(this.shopName == "") {
       this.ngOnInit();
     } else{
-      this.shops = this.shops.filter(shop => shop.name.toLocaleLowerCase().match(this.shopName.toLocaleLowerCase()));
+      this.shops = this.shops.filter(shop => shop.name.toLowerCase().match(this.shopName.toLowerCase()));
     }
   }
 
+  onEnter(key: string) {
+    this.shops = this.shops.filter(shop => shop.name.toLowerCase().match(key.toLowerCase()));
+    console.log("Enter pressed", this.shops);
+
+  }
 }

@@ -1,6 +1,6 @@
 <h1>Shops Dashboard</h1>
 <nav class="navbar">
-  <input type="text" class="form-control" name="shopName" [(ngModel)] = "shopName" (ngModelChange) = "search()"
+  <input type="text" class="form-control" name="shopName" #searchKey (keyup) = "onEnter(searchKey.value)" [(ngModel)] = "shopName" (ngModelChange) = "search()"
   placeholder="Enter name of a shop to search">
 </nav>
 <table class="table table-active">

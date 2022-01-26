@@ -18,11 +18,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { ShopsComponent } from './shops/shops.component';
 import { FooterComponent } from './footer/footer.component';
-import { DeleteComponent } from './delete/delete.component';
 import { ShopItemsComponent } from './shop-items/shop-items.component';
 import { VowelRemoverPipe } from './vowel-remover.pipe';
 import { TakeFirstlettersPipe } from './takeFirstletters.pipe';
 import { ChildComponent } from './child/child.component';
+import { DeleteShopComponent } from './delete-shop/delete-shop.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { ChildComponent } from './child/child.component';
     HomeComponent,
     ShopsComponent,
     FooterComponent,
-    DeleteComponent,
+    DeleteShopComponent,
     ShopItemsComponent,
     VowelRemoverPipe,
     TakeFirstlettersPipe,
@@ -50,7 +50,7 @@ import { ChildComponent } from './child/child.component';
     Ng2SearchPipeModule,
     RouterModule.forRoot([
       {
-        path: '', component: HomeComponent
+        path: '', redirectTo: 'shops', pathMatch: 'full'
       },
       {
         path: 'shops', component: ShopsComponent
@@ -68,7 +68,7 @@ import { ChildComponent } from './child/child.component';
         path: 'shops/view/:shopId/items', component: ShopItemsComponent
       },
       {
-        path: 'shops/delete/:shopId', component: DeleteComponent
+        path: 'shops/delete/:shopId', component: DeleteShopComponent
       }
     ])
   ],
