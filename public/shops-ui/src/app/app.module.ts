@@ -20,8 +20,9 @@ import { ShopsComponent } from './shops/shops.component';
 import { FooterComponent } from './footer/footer.component';
 import { DeleteComponent } from './delete/delete.component';
 import { ShopItemsComponent } from './shop-items/shop-items.component';
-import { flush } from '@angular/core/testing';
 import { VowelRemoverPipe } from './vowel-remover.pipe';
+import { TakeFirstlettersPipe } from './takeFirstletters.pipe';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { VowelRemoverPipe } from './vowel-remover.pipe';
     FooterComponent,
     DeleteComponent,
     ShopItemsComponent,
-    VowelRemoverPipe
+    VowelRemoverPipe,
+    TakeFirstlettersPipe,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

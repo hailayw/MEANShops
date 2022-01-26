@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { ShopService } from '../service/shop.service';
 import { Shop } from '../service/shop';
@@ -12,6 +12,7 @@ import { Shop } from '../service/shop';
 export class AddShopComponent implements OnInit {
   shop: Shop = new Shop('', '');//, 'category', 1234);
   submitted = false;
+  // @Input('parentData') public add: string;
 
   constructor(private shopService: ShopService, private router: Router) { }
 

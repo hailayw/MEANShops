@@ -13,15 +13,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let shop of shops | paginate : {itemsPerPage: 3, currentPage: page};">
-      <td>{{shop.name}}</td>
+      <td>{{shop.name | takeFirstletters}}: {{shop.name}}</td>
       <td>{{shop.category}}</td>
       <td>{{shop.established}}</td>
-      shop.name
-      shop._id
-      <td><button (click)="deleteShop(shop._id)">Delete</button>
-      <!-- <td><a [routerLink]="['delete', shop._id]">Delete</a> | -->
-      <a [routerLink]="['edit', shop._id]">Edit</a> |
-      <a [routerLink]="['view', shop._id]">View</a></td>
+      <!-- <td><button (click)="deleteShop(shop._idname)">Delete</button> -->
+      <td><button [routerLink]="['delete', shop._id]">Delete</button> |
+      <button [routerLink]="['edit', shop._id]">Edit</button> |
+      <button [routerLink]="['view', shop._id]">View</button></td>
     </tr>
   </tbody>
 </table>
